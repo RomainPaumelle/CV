@@ -1,0 +1,112 @@
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; /* Utilisation de Comic Sans MS */
+    text-align: justify;
+}
+
+a {
+    color: black; /* Force la couleur du texte en noir */
+    text-decoration: none; /* Enlève le soulignement des liens */
+}
+
+.custom-container {
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed; /* L'en-tête est fixé en haut */
+    top: 0; /* Aligne le haut de l'en-tête avec le haut de la fenêtre */
+    left: 0; /* Aligne le côté gauche */
+    z-index: 1000; /* Assure que l'en-tête est au-dessus d'autres éléments */
+}
+
+.header-col {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease; /* Transition pour les effets */
+    margin-bottom: 5px;
+}
+
+.header-col:hover {
+    background-color: #ffe0b2; /* Changement de couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de taille */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre au survol */
+}
+
+
+
+
+.header-small {
+    width: auto; /* Laisse les éléments s'ajuster à leur contenu */
+    padding: 5px 10px; /* Ajuste le padding */
+    margin: 0 10px; /* Ajuste la marge si besoin */
+}
+
+.center-vertical {
+    display: flex;
+    align-items: center; /* Centre verticalement les colonnes */
+    justify-content: center; /* Centre également horizontalement si nécessaire */
+}
+
+.profil-container{
+    margin-top: 170px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 100%;
+}
+.main-container{
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 100%
+
+}
+
+.profil-container, .main-container {
+    background-color: #F9F6EE !important; /* Couleur de fond douce */
+}
+
+.profile-image-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+}
+
+.profile-image {
+    max-width: 100%; /* Limite la taille de l'image */
+    height: auto;
+    border-radius: 50%; /* Image ronde */
+}
+
+.underlined-title {
+    text-decoration: underline; /* Ajoute un soulignement */
+    text-decoration-color: black; /* Couleur du soulignement (optionnel) */
+    text-decoration-thickness: 2px; /* Épaisseur du soulignement (optionnel) */
+}
+
+.experiences-section {
+    margin-top: 20px; /* Espacement au-dessus de la section */
+}
+
+.experiences-container {
+    padding: 20px; /* Espacement à l'intérieur de la section */
+    border-radius: 20px; /* Coins arrondis pour la section */
+    background-color: #f9f9f9; /* Couleur d'arrière-plan pour la section */
+}
+
+.experience {
+    margin-bottom: 20px; /* Espacement entre les expériences */
+    border: 1px solid #ccc; /* Bordure autour de chaque expérience */
+    border-radius: 10px; /* Arrondir les coins de chaque expérience */
+    padding: 15px; /* Espacement à l'intérieur de chaque expérience */
+    text-align: left;
+    background-color: #fff8e1;
+    transition: all 0.3s ease; /* Transition pour un effet doux */
+}
+
+
+/* Effet de survol pour les expériences */
+.experience:hover {
+    background-color: #ffe0b2; /* Couleur de fond au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Effet d'ombre au survol */
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
