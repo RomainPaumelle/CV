@@ -80,7 +80,7 @@
             </div>
 
             <div class="experience">
-                <div class="row">
+                <div class="row" onclick="openPopup()">
                     <div class="col s6"> <!-- Ajuste la largeur comme souhaité -->
                         <h6><U>The Moneytizer (Paris) | Business Developer</U> </h6> <!-- Titre de l'expérience -->
                     </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="experience">
                 <div class="row">
-                    <div class="col s6"> <!-- Ajuste la largeur comme souhaité -->
+                    <div class="col s6" pop> <!-- Ajuste la largeur comme souhaité -->
                         <h6><U>Noteece (Paris) | Business Developper</U></h6> <!-- Titre de l'expérience -->
                     </div>
                     <div class="col s4">
@@ -154,42 +154,54 @@
         </section>
     </main>
     <footer>
-        <div class="container white z-depth-3 main-container" id="contact-form"> <!-- Ajout de l'id contact-form -->
-            <h4 class="center-align profile-title underlined-title">Contactez-moi</h4>
-            <div class="row">
-                <form class="col s12 m4">
-                    <div class="row">
-                        <div class="input-field col s12 m12">
-                            <input id="name" type="text" class="validate" required>
-                            <label for="name">Nom</label>
+        <div class="container white z-depth-3 main-container s12 m4" id="contact-form"> <!-- Ajout de l'id contact-form -->
+            <button type="submit" class="btn" onclick="openPopup()">Contactez-moi</button>
+            <div class="popup" id="popup">
+                <div class="row">
+                    <form class="col s12 m4">
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <input id="name" type="text" class="validate" required>
+                                <label for="name">Nom</label>
+                            </div>
+                            <div class="input-field col s12 m12">
+                                <input id="email" type="email" class="validate" required>
+                                <label for="email">Email</label>
+                            </div>
                         </div>
-                        <div class="input-field col s12 m12">
-                            <input id="email" type="email" class="validate" required>
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="input-field col s12 m12">
-                            <input id="subject" type="text" class="validate" required>
-                            <label for="subject">Objet</label>
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <input id="subject" type="text" class="validate" required>
+                                <label for="subject">Objet</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="input-field col s12 m12">
-                            <textarea id="message" class="materialize-textarea" required></textarea>
-                            <label for="message">Message</label>
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <textarea id="message" class="materialize-textarea" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row center-align">
-                        <button class="btn waves-effect waves-light amber darken-2" type="submit" name="action">Envoyer
-                            <i class="material-icons right">send</i>
-                        </button>
-                    </div>
-                </form>
+                        <div class="row center-align">
+                            <button class="btn waves-effect waves-light amber darken-2" type="submit" name="action" onclick="closePopup()">Envoyer
+                                <i class="material-icons right">send</i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup")
+        }
+        </script>
 </body>
